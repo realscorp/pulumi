@@ -4492,9 +4492,6 @@ func packageRoot(pkg schema.PackageReference) (string, error) {
 		// package structure is flat
 		return "", nil
 	}
-	if info.ImportBasePath != "" {
-		return path.Base(info.ImportBasePath), nil
-	}
 	return goPackage(pkg.Name()), nil
 }
 
